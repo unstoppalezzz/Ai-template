@@ -1,0 +1,6 @@
+pyttsx3
+SpeechRecognition
+datetime 
+llama_cpp
+logging
+python-time
