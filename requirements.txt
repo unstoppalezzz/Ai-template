@@ -1,6 +1,6 @@
 pyttsx3
 SpeechRecognition
 datetime 
-llama_cpp
+llama-cpp-python
 logging
 python-time
