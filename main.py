@@ -13,6 +13,8 @@ logging.basicConfig(filename='ai_log.txt', level=logging.INFO,
 engine = pyttsx3.init()
 
 # Initialize Llama model
+# Make sure to write the path like this
+# D:\ai\Un\ai\Ai.gguf
 LLM = Llama(model_path=r"Put Your path to the ai here")
 
 # Initialize the Recognizer
@@ -68,12 +70,12 @@ def main():
                 text = UserVoiceRecognizer.recognize_google(audio).lower()
                 print(f"Recognized: {text}")
                 logging.info(f"Recognized: {text}")
-
+        # Made by unstoppalezzz
             if "ai" in text:
                 prompt = text.replace("ai", "").strip()
                 conversation_started = True
                 context_manager.update_context(prompt)
-        #Commands for the Ai
+        # Commands for the Ai
                 if "time" in prompt:
                     if check_confirmation(prompt, "What is the time?"):
                         response = get_time()
@@ -110,3 +112,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+# Made by unstoppalezzz
